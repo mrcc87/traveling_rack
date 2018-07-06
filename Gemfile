@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rack'
-gem 'puma'
-gem 'thin'
 
+group :development do
+    gem 'rake'
+end
