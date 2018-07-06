@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'rack'
-require 'rack/handler/puma'
 
 class Greeter
 
@@ -9,4 +8,4 @@ class Greeter
     Rack::Response.new("Hello World")
   end
 end
-Rack::Handler::Puma.run Greeter.new
+Rack::Handler::Thin.run Greeter.new, :Port => 3000
